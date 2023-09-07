@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const {DB} = process.env
 
-const sequelize = new Sequelize("postgres://edgarrios412:M16cY6oxZQk2A8Zo4jslTs5i4YpoP0jB@dpg-cig2odd9aq012et8kvn0-a.oregon-postgres.render.com:5432/vi?ssl=true", {
+const sequelize = new Sequelize(DB+"?ssl=true", {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   });
